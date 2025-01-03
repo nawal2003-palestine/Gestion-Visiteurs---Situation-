@@ -15,9 +15,11 @@ Ce projet implémente une application web PHP/MySQL pour gérer les visiteurs. D
 2. **Formulaire unique pour insertion et modification :**  
    Un seul formulaire est utilisé pour les deux opérations, avec une gestion dynamique des champs et de l'action (ajout ou modification).
 
-📂 Structure du Projet
-bash
-Copier le code
+
+
+## 📂 Structure du Projet
+
+```
 projet/
 │
 ├── Acces_BD/
@@ -35,17 +37,43 @@ projet/
 ├── index.php                 # Point d'entrée principal
 │
 └── README.md                 # Documentation du projet
+```
+
+---
 
 
 
-4. **Lancement de l'application :**
-   - Placez le projet dans le répertoire racine de votre serveur web (ex : `htdocs` pour XAMPP).
-   - Accédez à l'application via votre navigateur à l'adresse : `http://localhost/GESTION_VISITEURS/IHM/index.php`.
+## 🔧 Configuration
 
-## Tests
+ **Base de données :**
+   - Créez une base de données MySQL nommée `gestion_visiteurs`.
+   - Créez une table `VISITEURS` avec les champs suivants :
+     ```sql
+     CREATE TABLE VISITEURS (
+         ID INT AUTO_INCREMENT PRIMARY KEY,
+         NOM VARCHAR(25),
+         PRENOM VARCHAR(25),
+         EMAIL VARCHAR(25)
+     );
+     ```
 
-1. Accédez à `Formulaire.php` pour ajouter un nouveau visiteur ou modifier les données d'un visiteur existant.
-2. Vérifiez que les visiteurs s'affichent correctement dans `Affichage.php`.
-3. Testez les fonctionnalités de suppression et de recherche via les liens ou actions associés.
+
+ **Lancement de l'application :**
+   - Déplacez le projet dans le répertoire racine de votre serveur web (`htdocs` pour XAMPP).
+   - Accédez à `http://localhost/projet/index.php`.
+
+---
+
+
+## 📄 Tests
+
+1. Accédez à `form_Saisie.php` pour ajouter un nouveau visiteur.
+2. Modifiez un visiteur existant via `form_edit.php`.
+3. Vérifiez la liste des visiteurs dans `affichage.php`.
+4. Supprimez un visiteur et assurez-vous qu’il disparaît de la liste.
+
+---
+
+
 
 
